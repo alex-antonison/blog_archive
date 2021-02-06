@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: A post about how virtual environments can help with workflow, collaboration, and reproducibility
-categories: [data roles]
+categories: [reproducibility]
 title: venv is a Data Professional's best friend
 ---
 # venv is a Data Professional's best friend
