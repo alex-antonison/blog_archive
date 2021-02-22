@@ -7,25 +7,27 @@ title: venv is a Data Professional's best friend
 ---
 # venv is a Data Professional's best friend
 
-Have you ever tried to share some code with a colleague and they struggled to run it? Have you ever spent hours trying to get a machine learning library to work? Well, fortunately, there are solutions out there that can help with just that!  In this post, I will talk about virtual environments which is a utility that can be used to manage packages being used in a project.
+Have you ever tried to share a project with a colleague and they struggled to run it? Have you ever spent hours trying to get a machine learning library to work? If so, there are solutions out there that can help with just that!  In this post, I will talk about virtual environments which is a utility that can be used to manage specific packages for any given project.
 
 ## venv/renv
 
 When starting up a project, the first step I take is to spin up a virtual environment. In python, my personal favorite is the virtual environment utility built directly into python, [python venv](https://docs.python.org/3/tutorial/venv.html). In R, I like to use the package [renv](https://rstudio.github.io/renv/) supported by RStudio. I do this for the following reasons:
 
-* Clean slate. When installing packages in a virtual environment, you can either use the latest versions of packages without worrying about impacting previous projects or choose to use specific versions of packages.
-* Collaboration. If I am working on a project with others, I can share the virtual environment configuration files with them and they can also spin up an environment and run my code with the same packages.
+* Clean slate. When installing packages in a virtual environment, you can either use the latest versions of packages without worrying about impacting other projects or choose to use specific versions of packages.
+* Collaboration. If I am working on a project with others, I can share the virtual environment configuration files and they can spin up a virtual environment and run my code with the same packages.
 * Reproducibility. When I set the project down and I want to pick it up at a later time, I can ensure I am using the same packages as when I first started the project.
 
 For python, you can run:
 
 ```bash
 cd /path/to/project
+# creates the virtual environment
 python -m venv venv
+# activates the virtual environment in your terminal
 source venv/bin/activate
 ```
 
-Once set up and activated, you can then install all of the packages you need for your project and then save them to a `requirements.txt` file that should be included with your project when sharing.
+Once the environment is created and activated, you can then install all of the packages you need for your project and then save them to a `requirements.txt` file that should be included with your project when sharing.
 
 ```bash
 pip freeze > requirements.txt
@@ -52,7 +54,7 @@ This will update the `renv.lock` file that should be used when sharing your code
 
 ## Limitations
 
-While virtual environments are great at managing packages needed to run the code in a project, it is limited to just that.  There are other aspects of running a project such as application or operating system dependencies. To completely solve for reproducing the environment of a project, you can explore using [docker](https://www.docker.com/), a utility that will allow for capturing your entire environment which includes an Operating System and supporting applications.  There is a steeper learning curve to this and I plan on dedicating entire post(s) to this topic on how docker is a more comprehensive solution to reproducibility.
+While virtual environments are great at managing packages needed to run the code in a project, it is limited to just that.  There are other aspects of running a project such as application or operating system dependencies. To completely solve for reproducing the environment of a project, you can explore using [docker](https://www.docker.com/), a utility that will allow for capturing your entire environment which includes the Operating System and supporting applications.  There is a steeper learning curve to this and I plan on dedicating entire post(s) to this topic on how docker is a more comprehensive solution to reproducibility.
 
 ## Other virtual environment tools
 
