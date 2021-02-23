@@ -7,7 +7,7 @@ title: venv is a Data Professional's best friend
 ---
 # venv is a Data Professional's best friend
 
-Have you ever tried to share a project with a colleague and they struggled to run it? Have you ever spent hours trying to get a machine learning library to work? If so, there are solutions out there that can help with this!  In this post, I will talk about virtual environments which is a utility that can be used to manage specific packages for any given project.
+Have you ever tried to share a project with a colleague and they struggled to run it? Have you ever spent hours trying to get a machine learning library to work? If so, there are solutions out there that can help with this!  In this post, I will talk about a utility, virtual environments, that can be used to manage specific packages.
 
 ## venv/renv
 
@@ -54,7 +54,7 @@ This will update the `renv.lock` file that should be used when sharing your code
 
 ## Limitations
 
-While virtual environments are great at managing packages needed to run the code in a project, it is limited to just that.  There are other aspects of running a project such as application or operating system dependencies. To completely solve for reproducing the environment of a project, you can explore using [docker](https://www.docker.com/), a utility that will allow for capturing your entire environment which includes the Operating System and supporting applications.  There is a steeper learning curve to this, and I plan on dedicating entire post(s) to the topic of how docker is a more comprehensive solution to reproducibility.
+While virtual environments are great at managing packages needed to run code, it is limited to just that.  There are other aspects of running a project such as application or operating system dependencies. To completely solve for reproducing the environment for running code, you can explore using [docker](https://www.docker.com/), a utility that will allow for capturing your entire environment which includes the Operating System and supporting applications.  There is a steeper learning curve to this, and I plan on dedicating entire post(s) to the topic of how docker is a more comprehensive solution to reproducibility.
 
 ## Other virtual environment tools
 
